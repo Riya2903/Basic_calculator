@@ -1,10 +1,11 @@
+import math
 print("Please enter your name here: ")
 name = input()
 print(f"Welcome {name}, please enter your choices: ")
 
 x = ""
 while(x !='q'):
-    print("Enter the operation you want to perform 1. Addition\n 2.Subration\n 3.Multiply\n 4.Division\n 5.Modulus.")
+    print("Enter the operation you want to perform 1. Addition\n 2.Subration\n 3.Multiply\n 4.Division\n 5.Modulus\n 6.Exponent")
     b = input()
     if b == "1":
         print("Enter the operands in the format op1 op2: ")
@@ -29,6 +30,10 @@ while(x !='q'):
         print("Enter the operands in the format op1 op2: ")
         a,c = map(int, input().split(" "))
         print(a%c)
+    elif b == "6":
+        print("Enter the operands in the format op1 op2: ")
+        a,c = map(int, input().split(" "))
+        print(math.pow(a,c))
     else:
         print("Invalid Operation")
     print("press q to quit or to continue press any key: ")
